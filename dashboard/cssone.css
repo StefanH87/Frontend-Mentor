@@ -1,0 +1,358 @@
+@import "color_var.css";
+@import "size.css";
+@import "logo.css";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  width: 1440px;
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+  font-size: var(--standart-font-size);
+}
+
+body {
+  display: grid;
+  place-content: center;
+
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+    to top,
+    var(--Very-Dark-Blue-Pattern) 70vh,
+    var(--Very-Dark-Blue-BG) 30vh
+  );
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  column-gap: var(--gap-Y);
+  row-gap: var(--gap-X);
+
+  width: 100vw;
+  height: 100vh;
+  padding: var(--pd-top) var(--pd-right) var(--pd-bottom) var(--pd-left);
+  color: var(--White);
+}
+
+/*-----------------------Main ---End-----------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------*/
+/*----------------------Dashboard-section-------------------------------------------------------------*/
+.dashboard {
+  grid-column: span 3;
+  min-height: 6rem;
+  padding: 3rem 0 0rem 0;
+}
+.heading {
+  /* margin-bottom: -3rem; */
+  font-weight: var(--font-weight-second-txt);
+  font-size: var(--font-size-main);
+  letter-spacing: 0.05em;
+}
+
+.total {
+  font-size: var(--font-size-big);
+
+  color: var(--Desaturated-Blue);
+  padding: 0.4rem 0 0;
+}
+.number {
+  display: inline-flex;
+  margin-left: 0.5rem;
+}
+/*----------------------Dashboard-section--Ende-----------------------------------------------------------*/
+/*----------------------Oveerview-section--Ende-----------------------------------------------------------*/
+.overview {
+  display: inline-flex;
+
+  align-items: center;
+  grid-column: span 4;
+  padding-top: var(--overview-top);
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*---------------------Button------------------------*/
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.mode {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  margin-left: 1rem;
+}
+
+.dark-mode {
+  display: inline-block;
+  color: var(--Desaturated-Blue);
+  font-size: var(--font-size-big);
+
+  font-weight: var(--font-weight-second-txt);
+}
+
+.mode input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--check-dark-bg);
+  transition: 0.4s;
+  border-radius: 25px;
+}
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 3px;
+  bottom: 2px;
+  background: var(--Very-Dark-Blue-BG);
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider:before {
+  translate: 28px 0;
+}
+/*----------------Button Ende------------------------*/
+/*---------------------------------------------------*/
+
+.card {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--Dark-Desaturated-Blue);
+  border-radius: 0.5rem;
+  padding: var(--top-p) var(--side-p) var(--bottom-p);
+}
+
+.card:hover,
+.view:hover {
+  background: var(--hover-color);
+  cursor: pointer;
+}
+
+.facebook::before,
+.twitter::before,
+.insta::before,
+.youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.4rem;
+  width: 100%;
+  border-radius: 2rem 2rem 0 0;
+  margin-bottom: 1rem;
+}
+
+.facebook::before {
+  background: var(--facebook-color);
+}
+.twitter::before {
+  background: var(--twitter-color);
+}
+
+.insta::before {
+  background-image: var(--instagram-color);
+}
+
+.youtube::before {
+  background: var(--youtube-color);
+}
+.name-icon-wrapper {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.name-icon-wrapper > svg {
+  margin-right: 0.5rem;
+}
+
+.name {
+  font-size: var(--font-size-small);
+  color: var(--Desaturated-Blue);
+
+  font-weight: var(--font-weight-second-txt);
+}
+
+.followers-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  font-size: var(--follows-number);
+  font-weight: var(--font-weight-first-txt);
+}
+.subheading {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-thin-txt);
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  color: var(--Desaturated-Blue);
+  margin-bottom: 2rem;
+}
+
+/*----------------------------------------------------*/
+/*----------------Trend Up - down----------------------------*/
+.today-up,
+.today-down {
+  display: inline-flex;
+  font-weight: var(--font-weight-second-txt);
+  font-size: var(--font-size-big);
+}
+
+.today-up {
+  color: var(--lime-green);
+}
+
+.today-down {
+  color: var(--bright-red);
+}
+
+/*------------------------------------------------------------------*/
+/*----------------------------------------------------*/
+/*----------------Trebnd Up - down----------------------------*/
+
+.view {
+  background: var(--Dark-Desaturated-Blue);
+
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: var(--top-p) 2rem var(--bottom-p) 2rem;
+}
+
+.today-number {
+  font-size: var(--today-number);
+  font-weight: var(--font-weight-first-txt);
+}
+
+.today-view,
+.icon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 0.8rem;
+}
+.total,
+.today-number {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+
+.today-view {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  flex-direction: row;
+}
+
+.today-number,
+.today-view {
+  padding-top: 1rem;
+}
+
+.view > .total {
+  color: var(--Desaturated-Blue);
+  font-weight: var(--font-weight-second-txt);
+}
+
+.triangle.fb-views-down,
+.triangle.fb-likes-up,
+.triangle.insta-down,
+.triangle.insta-views-down,
+.triangle.twitter-views-down,
+.triangle.twitter-likes-down,
+.triangle.you-likes-up,
+.triangle.you-views-up,
+.triangle.insta-day-down,
+.triangle.twitter-day-down,
+.triangle.fb-day-down,
+.triangle.yb-day-up {
+  display: none;
+}
+
+.triangle {
+  display: flex;
+  align-items: center;
+}
+.triangle > svg {
+  margin-right: 0.5rem;
+}
+/*----------------Trebnd Up - down----------------------------*/
+/*------------------------------------------------------------------*/
+/*----------------------------------------------------*/
+@media (max-width: 500px) {
+  :root {
+    --standart-font-size: 18px;
+  }
+
+  body {
+    width: 100vw;
+
+    background-image: linear-gradient(
+      0deg,
+      var(--Very-Dark-Blue-Pattern) 60%,
+      var(--Very-Dark-Blue-BG) 40%
+    );
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: var(--mobile-pd-top) var(--mobile-pd-right) var(--mobile-pd-bottom)
+      var(--mobile-pd-left);
+  }
+  .card {
+    border-radius: 0.5rem;
+    padding: 3rem 1rem 2rem 1rem;
+    transition: 0.2s ease-in-out;
+  }
+  .view {
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 2.5rem 2rem 2.5rem;
+    transition: 0.2s ease-in-out;
+  }
+  .today-number,
+  .today-view {
+    padding-top: 3rem;
+  }
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: var(--border-mobile);
+
+    padding-top: 1rem;
+  }
+}

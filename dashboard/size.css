@@ -1,0 +1,56 @@
+:root {
+  /*-----------------font-size---------*/
+  --standart-font-size: 14px;
+
+  --font-weight-second-txt: 600;
+  --font-weight-first-txt: 700;
+  --font-weight-thin-txt: 300;
+
+  --font-size-main: calc(var(--standart-font-size) * 1.8);
+  --font-size-big: calc(var(--standart-font-size) - 0.1rem);
+  --font-size-small: calc(var(--standart-font-size) - 0.2rem);
+  --follows-number: calc(var(--standart-font-size) * 3.5);
+  --today-number: calc(var(--follows-number) / 2);
+
+  /*-----------------padding-grid-- Zeile 37-------*/
+  /*------------------------------------------------------*/
+  /*------------------card-padding--------------*/
+
+  --top-p: clamp(1vw, 5vh, 2vw);
+  --bottom-p: clamp(0.2vw, 5vh, 1vw);
+  --side-p: clamp(1vw, 50vw, 5vw);
+
+  --side-p-view: clamp(1vw, 50vw, 3vw);
+
+  --overview-top: clamp(3vh, 30vh, 4vh);
+  /*------------------------------------------------------*/
+  /*----gap----------------------------------------------*/
+
+  --gap-Y: clamp(1vw, 10vw, 2vw);
+  --gap-X: clamp(1vh, 15vw, 3vh);
+
+  --pd-left: calc(1rem + 15vw);
+  --pd-right: calc(5rem + 10vw);
+  --pd-bottom: calc(2rem + 5vh);
+  --pd-top: calc(2rem + 5vh);
+
+  --mobile-pd-left: calc(1rem + 5vw);
+  --mobile-pd-right: calc(1rem + 5vw);
+  --mobile-pd-bottom: calc(2rem + 5vh);
+  --mobile-pd-top: calc(1rem + 1vh);
+}
+
+main {
+  display: grid;
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  column-gap: var(--gap-Y);
+  row-gap: var(--gap-X);
+
+  width: 100vw;
+  height: 100vh;
+  padding: var(--pd-top) var(--pd-right) var(--pd-bottom) var(--pd-left);
+  color: var(--White);
+}
+/*-------------------------------------Mobile--Version----------------------------------*/

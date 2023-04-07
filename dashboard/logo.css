@@ -1,0 +1,72 @@
+:root {
+  /*------------------------------Logo-colors----------------*/
+  --facebook-logo: #da70d6;
+  --youtube-logo: #6495ed;
+  --twitter-logo: #ff8c00;
+  --instagram-logo: url(#b);
+
+  --facebook-logo: #178ff5;
+  --youtube-logo: #c4032b;
+  --twitter-logo: #1da1f2;
+  --instagram-logo: url(#a);
+
+  /*-----------------Logo-colors-End------------------------*/
+  /*--------------------------------------------------*/
+  /*--------------Main Colors-Border--------------------------*/
+  --facebook-color: hsl(208, 92%, 53%);
+  --twitter-color: hsl(203, 89%, 53%);
+  --instagram-color: linear-gradient(
+    to right,
+    hsl(37, 97%, 70%),
+    hsl(329, 70%, 58%)
+  );
+  --youtube-color: hsl(348, 97%, 39%);
+
+  /*-----------------Today-up-down---------------------------*/
+
+  /* --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%); */
+}
+
+.fb-logo {
+  fill: var(--facebook-logo);
+}
+.twitter-logo {
+  fill: var(--twitter-logo);
+}
+.insta-logo {
+  fill: var(--instagram-logo);
+}
+.yb-logo {
+  fill: var(--youtube-logo);
+}
+
+.triangle.fb-views-up,
+.triangle.fb-likes-up,
+.triangle.insta-views-up,
+.triangle.insta-likes-up,
+.triangle.twitter-views-up,
+.triangle.twitter-likes-up,
+.triangle.you-views-up,
+.triangle.you-likes-up,
+.triangle.yb-day-up,
+.triangle.insta-day-up,
+.triangle.twitter-day-up,
+.triangle.fb-day-up {
+  fill: var(--lime-green);
+}
+
+.triangle.fb-views-down,
+.triangle.fb-likes-down,
+.triangle.insta-views-down,
+.triangle.insta-likes-down,
+.triangle.twitter-views-down,
+.triangle.twitter-likes-down,
+.triangle.you-views-down,
+.triangle.you-likes-down,
+.triangle.yb-day-down,
+.triangle.insta-day-down,
+.triangle.twitter-day-down,
+.triangle.fb-day-down {
+  fill: var(--bright-red);
+}
