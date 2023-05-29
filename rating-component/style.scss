@@ -1,0 +1,26 @@
+$pirmary: red;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  width: 100vw;
+  height: 100vh;
+  background-color: green;
+}
+div {
+  display: block;
+  width: 300px;
+  height: 300px;
+  background: $pirmary;
+  &:hover {
+    background-color: pink;
+  }
+  &:active {
+    background: blue;
+  }
+}
